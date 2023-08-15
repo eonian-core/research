@@ -3,6 +3,4 @@ def get_year_old_block(web3, seconds_per_block):
     blocks_per_year = seconds_per_year / seconds_per_block
 
     latest_block = web3.eth.block_number
-    year_old_block = int(latest_block - blocks_per_year)
-
-    return web3.eth.get_block(year_old_block)
+    return int(latest_block - blocks_per_year)
